@@ -1,0 +1,175 @@
+fuction nombrefuncion(parametros){
+	//instrucciones	
+}
+
+llamar a la funcion
+
+nombrefuncion(parametros);
+
+
+agregar funciones a variables
+
+var nombreVariable = function (parametros){
+	//instrucciones
+}
+
+#######################################
+ejemplo:
+
+
+var suma = function (numero1, numero2){
+	//instrucciones
+	var numero1 = numero1;
+	var numero2 = numero2;
+
+	return numero1 + numero2;
+}
+
+
+document.write( suma(40, 50) );
+
+#########################################
+
+
+Calculadora + formularios
+
+Encontrar elementos en el DOM del documento HTML
+
+document.getElementsById("id del elemento").value;
+
+funcion de JS para transformar cadena de texto a entero
+
+parseFloat(document.getElementById("idElemento").value);
+
+EJEMPLO: var suma = function  (numero1 , numero2 ) {
+
+	var numero1 = parseInt(document.getElementById("numero1").value);
+
+	var numero2 =	parseFloat(document.getElementById("numero2").value);
+
+	var resultado = numero1 + numero2;
+
+	return resultado;
+}
+
+
+#################################################
+
+
+Scope de Javascript(ambito de las variables)
+
+El scope determina la accesibilidad de nuestro codigo
+
+ // Global - Podemos acceder a ellas desde cualquier parte del codigo.
+
+ // Local - Variables creadas dentro de una funcion, solo pueden ser accedidas
+
+
+
+ var variableGlobal = "Esta es Global"; //Variable global
+
+ var miFuncion = function() {
+ 	var variableLocal = "Esta es Local";
+}
+
+
+Crear funcion autoinvocada para proteger de scipt de terceros
+
+(function(){
+	//todo el codigo, nada puede ingresar, pero si puede salir el codigo para afuera
+}())
+
+
+########################################
+
+Metodos y propiedades para las cadenas de texto
+
+.length (sabemos cuantos caracteres tiene la cadena de texto)
+
+var texto = "Carlos Arturo";
+var nuevoTexto = texto.length;
+
+.substring(numero) cortar una cadena de texto en el numero hasta el final
+
+.substr(indice de inicio, caracteres a extraer) corta desde la primer posicion al ultimo
+
+.indexOff("letra", empezar busqueda);  nos devuelve en que posicion se encuentra dicha letra. Si hay letras repetidas,pasas segundo parametro desde donde empezar a buscar
+
+var texto = "Carlos Arturo";
+var texto2 = texto.indexOf("o");
+var nuevoTexto = texto.indexOf("o", texto2);  comienza desde el valor tomado por texto 2
+
+.lastIndexOf("letra")  empieza a buscar desde atras a adelante
+
+.replace(textoModificar, "texto por cual cambiar") recibe dos parametros, el texto a modificar y la modificacion
+
+.toUpperCase() cambiar texto a mayuscula
+.toLowerCase() cambiar texto a minuscula
+
+INVESTIGAR
+
+
+################################################ 
+
+DOM
+
+para acceder a los elementos desde js
+
+var elementoP = document.getElementsByTagName("etiqueta");
+var element = document.getElementsById("Id");
+
+desde la consola del navegador se puede navegar como si fuera un array
+
+para acceder al contenido es igual que como si fuera una arrays, pero agragandole
+
+.innerHTML
+
+°°°°°°°°°°°°°°°°°°°°
+
+Crear nodo
+
+hay que seguir estos pasos
+
+// 1.- Crear el elemento
+	crear una variable de la etiqueta
+	var elemento = document.createElement("tipoDeElemento");
+	/*tipoDeElemento = <p> <h2> etc*/
+
+// 2.- Crear el nodo de texto
+	crear una variable con el contenido
+	var contenido = document.createTextNode("texto del contenido");
+
+// 3.- Añadir el nodo de texto al elemento
+	llamar a nuestra variable  elemento
+	elemento.appendChild(contendido);
+
+// 4.- Agregar Atributos al elemento
+	agregar atributos tipo CSS
+	elemento.setAttribute("align", "center");
+
+// 5.- Agregar el elemento al documento
+	usar un div donde agregar y buscarlo con el id
+	document.getElementById("subtitulo")
+
+°°°°°°°°°°°°°°°°°°°°°°°°
+
+Eliminar 
+
+var elemento = document.createElement("li"),
+	contenido = document.createTextNode("Nuevo Texto");
+
+	elemento.appendChild(contenido);
+
+var padre = document.getElementById("primero").parentNode,
+	referencia = document.getElementById("primero");
+//recibve un parametro del elemento que deseamos eliminar
+padre.removeChild(referencia);
+
+
+MOdificar
+
+
+
+
+
+
